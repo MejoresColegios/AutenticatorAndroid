@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "611213002819",
+    "project_id": "autenticacion-ffa84",
+    "storage_bucket": "autenticacion-ffa84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611213002819:android:caa0b3a3f203e2be78acf6",
+        "android_client_info": {
+          "package_name": "com.mejorescolegios.autenticacion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQVucifMtIT0jt0KeJrsWQg1KExHE0XnM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
