@@ -17,7 +17,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="461dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="24dp"
@@ -85,15 +85,5 @@
                 app:cornerRadius="20dp"
                 tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,VisualLintButtonSize" />
 
-            <TextView
-                android:id="@+id/loginRedirectText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:text="Already a user. Login"
-                android:textColor="@color/design_default_color_primary_dark"
-                android:textSize="18sp"
-                tools:ignore="HardcodedText" />
         </LinearLayout>
     </androidx.cardview.widget.CardView> </LinearLayout>

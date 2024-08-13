@@ -33,7 +33,6 @@ public class SignUpActivity extends AppCompatActivity {
      signupEmail = findViewById(R.id.signup_email);
      signupPassword = findViewById(R.id.signup_password);
      signupButton = findViewById(R.id.signup_button);
-     loginRedirectText = findViewById(R.id.loginRedirectText);
      signupButton.setOnClickListener(new View.OnClickListener() {
          @Override public void onClick(View view) {
              String user = signupEmail.getText().toString().trim();
@@ -57,10 +56,6 @@ public class SignUpActivity extends AppCompatActivity {
              }
          }
      });
-     loginRedirectText.setOnClickListener(new View.OnClickListener() {
-         @Override public void onClick(View view) {
-             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
-     }
-     });
+
  }
 }
