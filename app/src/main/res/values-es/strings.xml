@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="password">Contraseña</string>
+    <string name="login">Acceder</string>
+    <string name="not_yet_registered_sign_up">¿No estás registrado? Pulsa aquí</string>
+    <string name="FullName">Nombre completo</string>
+    <string name="Google">Accede con Google</string>
+    <string name="EmailPassword">Correo y contraseña</string>
+</resources>

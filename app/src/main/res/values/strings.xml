@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Authentication</string>
+    <string name="app_name" translatable="false">Authenticator</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="email">Email</string>
+    <string name="email" translatable="false">Email</string>
     <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
     <string name="FullName">Full name</string>
-    <string name="tvInicial">Authentication</string>
+    <string name="tvInicial" translatable="false">Authenticator</string>
     <string name="Google">Sign in with Google</string>
-    <string name="EmailPassword"><![CDATA[Email & Password]]></string>
+    <string name="EmailPassword">Email and password</string>
 </resources>
