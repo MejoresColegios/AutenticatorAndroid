@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Autenticacion</string>
+    <string name="app_name">Authentication</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
+    <string name="FullName">Full name</string>
 </resources>

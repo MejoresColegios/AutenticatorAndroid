@@ -14,58 +14,86 @@
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_height="461dp"
             android:layout_gravity="center_horizontal"
-            android:padding="24dp">
+            android:orientation="vertical"
+            android:padding="24dp"
+            tools:ignore="TextSizeCheck">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
-                android:textSize="36sp"
                 android:textAlignment="center"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="36sp"
                 android:textStyle="bold"
-                android:textColor="@color/black" />
+                tools:ignore="HardcodedText" />
+
             <EditText
+                android:id="@+id/signup_fullName"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/signup_email"
-                android:layout_marginRight="40dp"
                 android:layout_marginTop="40dp"
-                android:padding="8dp"
-                android:hint="Email"
+                android:autofillHints=""
                 android:drawablePadding="8dp"
-                android:textColor="@color/black" />
-            <EditText android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:id="@+id/signup_password"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="20dp"
+                android:hint="@string/FullName"
+                android:inputType="text"
                 android:padding="8dp"
-                android:hint="Password"
-                android:drawablePadding="8dp"
                 android:textColor="@color/black"
-                android:inputType="textPassword"/>
+                android:textColorHint="#757575"
+                tools:ignore="DuplicateIds,HardcodedText,VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:autofillHints=""
+                android:drawablePadding="8dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757575"
+                tools:ignore="DuplicateIds,HardcodedText,VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="8dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#757575"
+                tools:ignore="Autofill,VisualLintTextFieldSize" />
+
             <Button
+                android:id="@+id/signup_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Sign Up"
-                android:id="@+id/signup_button"
-                android:textSize="18sp"
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                app:cornerRadius = "20dp" />
+                android:backgroundTint="@color/design_default_color_error"
+                android:text="Sign Up"
+                android:textSize="18sp"
+                app:cornerRadius="20dp"
+                tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,VisualLintButtonSize" />
+
             <TextView
+                android:id="@+id/loginRedirectText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/loginRedirectText"
-                android:text="Already a user. Login"
                 android:layout_gravity="center"
                 android:padding="8dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:text="Already a user. Login"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
     </androidx.cardview.widget.CardView> </LinearLayout>

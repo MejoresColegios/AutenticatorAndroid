@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         saludoTextView = findViewById(R.id.saludoTextView);
         FirebaseUser usuario = auth.getCurrentUser();
         if (usuario != null) {
-            String nombreUsuario = usuario.getEmail() != null ? usuario.getEmail() : "Usuario";
+            String nombreUsuario = usuario.getDisplayName() != null ? usuario.getDisplayName() : "Usuario";
             saludoTextView.setText("Hola, " + nombreUsuario);
         } else {
             // Manejar el caso en que el usuario no ha iniciado sesión
