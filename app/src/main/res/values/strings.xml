@@ -8,4 +8,5 @@
     <string name="tvInicial" translatable="false">Authenticator</string>
     <string name="Google">Sign in with Google</string>
     <string name="EmailPassword">Email and password</string>
+    <string name="SignOut">Sign out</string>
 </resources>

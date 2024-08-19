@@ -1,13 +1,13 @@
 package com.mejorescolegios.autenticacion;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -19,26 +19,42 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAnalytics mFirebaseAnalytics;
     private FirebaseAuth auth;
     private TextView saludoTextView;
+    private Button signOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Inicializa Firebase
-        FirebaseApp.initializeApp(this);
-        // Inicializa Firebase Authentication
-        FirebaseAuth.getInstance();
-        // Obtain the FirebaseAnalytics instance.
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_main);
-        auth = FirebaseAuth.getInstance();
+
+        // Inicializar las vistas
+        signOut = findViewById(R.id.btnSignOut);
         saludoTextView = findViewById(R.id.saludoTextView);
+
+        // Inicializar Firebase
+        FirebaseApp.initializeApp(this);
+        auth = FirebaseAuth.getInstance();
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+        // Obtener usuario actual
         FirebaseUser usuario = auth.getCurrentUser();
         if (usuario != null) {
             String nombreUsuario = usuario.getDisplayName() != null ? usuario.getDisplayName() : "Usuario";
-            saludoTextView.setText("Hola, " + nombreUsuario);
+            String uidUsuario = usuario.getUid();
+
+            saludoTextView.setText("Hola, " + nombreUsuario + ". \nEl ID de tu usuario es: \n" + uidUsuario);
         } else {
-            // Manejar el caso en que el usuario no ha iniciado sesión
             saludoTextView.setText("Por favor, inicia sesión");
         }
+
+        // Configurar el botón de cerrar sesión
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                auth.signOut();
+                Toast.makeText(MainActivity.this, "Sesión cerrada", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, Inicial.class));
+                finish();
+            }
+        });
     }
 }
