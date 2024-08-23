@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private EditText loginEmail, loginPassword;
     private TextView signupRedirectText;
-    private Button loginButton;
+    private Button loginEmailButton;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,9 +27,10 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
-        loginButton = findViewById(R.id.login_button);
+        loginEmailButton = findViewById(R.id.login_button);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        // Login con Email y contraseña
+        loginEmailButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
                 String email = loginEmail.getText().toString();
                 String pass = loginPassword.getText().toString();
@@ -55,6 +56,9 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // Login with Google
+
 
     }
 }

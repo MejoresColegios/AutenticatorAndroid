@@ -6,4 +6,5 @@
     <string name="FullName">Nombre completo</string>
     <string name="Google">Accede con Google</string>
     <string name="EmailPassword">Correo y contraseña</string>
+    <string name="SignOut">Cerrar sesión</string>
 </resources>

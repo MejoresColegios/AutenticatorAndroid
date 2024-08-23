@@ -9,4 +9,5 @@
     <string name="Google">Sign in with Google</string>
     <string name="EmailPassword">Email and password</string>
     <string name="SignOut">Sign out</string>
+    <string name="google_sign_in_client_id" translatable="false">611213002819-22fmhtn893bi27l1nsutpfqkaffe58m8.apps.googleusercontent.com</string>
 </resources>

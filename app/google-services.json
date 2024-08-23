@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "611213002819",
+    "firebase_url": "https://autenticacion-ffa84-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "autenticacion-ffa84",
     "storage_bucket": "autenticacion-ffa84.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.mejorescolegios.autenticacion"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "611213002819-22fmhtn893bi27l1nsutpfqkaffe58m8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mejorescolegios.autenticacion",
+            "certificate_hash": "ce2cb79b3194b27d9f548a3f3b683da6c1cad5ed"
+          }
+        },
+        {
+          "client_id": "611213002819-5f8vp8v24rrmi54t6n8ovssb3880h1t5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAQVucifMtIT0jt0KeJrsWQg1KExHE0XnM"
@@ -20,7 +34,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611213002819-5f8vp8v24rrmi54t6n8ovssb3880h1t5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "611213002819-gjibvb0j6gvplql453esco1h8hnda9me.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mejorescolegios.Autenticator"
+              }
+            }
+          ]
         }
       }
     }
