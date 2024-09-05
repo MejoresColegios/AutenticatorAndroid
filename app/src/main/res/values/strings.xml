@@ -1,13 +1,30 @@
 <resources>
-    <string name="app_name" translatable="false">Authenticator</string>
+    <string name="app_name" translatable="false">Autenticator</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="email" translatable="false">Email</string>
     <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
     <string name="FullName">Full name</string>
-    <string name="tvInicial" translatable="false">Authenticator</string>
+    <string name="tvInicial" translatable="false">Autenticator</string>
     <string name="Google">Sign in with Google</string>
     <string name="EmailPassword">Email and password</string>
     <string name="SignOut">Sign out</string>
     <string name="google_sign_in_client_id" translatable="false">611213002819-22fmhtn893bi27l1nsutpfqkaffe58m8.apps.googleusercontent.com</string>
+    <string name="btnViewContacts">View contacts</string>
+    <string name="txtSigIn">Please Sign in</string>
+    <string name="google_sign_in_failed">Google sign in failed</string>
+    <string name="signinwithcredential_failure">signInWithCredential:failure</string>
+    <string name="user_not_logged_in">User not logged in</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="password_cannot_be_empty">Password cannot be empty</string>
+    <string name="email_cannot_be_empty">Email cannot be empty</string>
+    <string name="please_enter_a_valid_email">Please enter a valid email</string>
+    <string name="usuario">User</string>
+    <string name="hola">"Hi, "</string>
+    <string name="el_id_de_tu_usuario_es">Your user id is \n</string>
+    <string name="sesi_n_cerrada">Logout session</string>
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="signup_successful">Signup Successful</string>xº
+    <string name="signup_failed">Signup Failed</string>
+    <string name="Sign_Up">Sign Up</string>
 </resources>

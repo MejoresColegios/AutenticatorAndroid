@@ -1,6 +1,4 @@
-package com.mejorescolegios.autenticacion;
-
-import static com.mejorescolegios.autenticacion.R.id.signUpRedirectText;
+package com.mejorescolegios.autenticacion.Views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,26 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.mejorescolegios.autenticacion.R;
 
 public class Inicial extends AppCompatActivity {
 
@@ -114,7 +106,7 @@ public class Inicial extends AppCompatActivity {
                 }
             } catch (ApiException e) {
                 // Manejo de error
-                Log.w("Google SignIn", "Google sign in failed", e);
+                Log.w("Google SignIn", getString(R.string.google_sign_in_failed), e);
             }
         }
     }
@@ -129,7 +121,7 @@ public class Inicial extends AppCompatActivity {
                         updateUI(user);
                     } else {
                         // Si el inicio de sesión falla, muestra un mensaje al usuario
-                        Log.w("Google SignIn", "signInWithCredential:failure", task.getException());
+                        Log.w("Google SignIn", getString(R.string.signinwithcredential_failure), task.getException());
                         updateUI(null);
                     }
                 });
@@ -143,8 +135,8 @@ public class Inicial extends AppCompatActivity {
             finish();
         } else {
             // Mostrar alguna notificación de que el inicio de sesión falló
-            Log.w("Google SignIn", "User not logged in");
-            Toast.makeText(this, "Google sign in failed", Toast.LENGTH_SHORT).show();
+            Log.w("Google SignIn", getString(R.string.user_not_logged_in));
+            Toast.makeText(this, getString(R.string.google_sign_in_failed), Toast.LENGTH_SHORT).show();
         }
     }
 

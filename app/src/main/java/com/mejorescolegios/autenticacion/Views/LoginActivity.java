@@ -1,4 +1,6 @@
-package com.mejorescolegios.autenticacion;
+package com.mejorescolegios.autenticacion.Views;
+
+import static com.mejorescolegios.autenticacion.R.string.login_successful;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +16,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mejorescolegios.autenticacion.R;
 
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth auth;
@@ -38,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(!email.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
                     if (!pass.isEmpty()) { auth.signInWithEmailAndPassword(email, pass) .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                         @Override public void onSuccess(AuthResult authResult) {
-                            Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, login_successful, Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(LoginActivity.this, MainActivity.class ));
                             finish();
                         }
@@ -48,17 +51,14 @@ public class LoginActivity extends AppCompatActivity {
                                     Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                                 }
                             });
-                    } else { loginPassword.setError("Password cannot be empty");
+                    } else { loginPassword.setError(getString(R.string.password_cannot_be_empty));
                     }
                 } else if (email.isEmpty()) {
-                    loginEmail.setError("Email cannot be empty");
-                } else { loginEmail.setError("Please enter a valid email");
+                    loginEmail.setError(getString(R.string.email_cannot_be_empty));
+                } else { loginEmail.setError(getString(R.string.please_enter_a_valid_email));
                 }
             }
         });
-
-        // Login with Google
-
 
     }
 }

@@ -7,4 +7,21 @@
     <string name="Google">Accede con Google</string>
     <string name="EmailPassword">Correo y contraseña</string>
     <string name="SignOut">Cerrar sesión</string>
+    <string name="btnViewContacts">Ver contactos</string>
+    <string name="txtSigIn">Por favor inicia sesión</string>
+    <string name="login_successful">Inicio de sesión correcto</string>
+    <string name="password_cannot_be_empty">La contraseña no puede estar vacía</string>
+    <string name="email_cannot_be_empty">El email no puede estar vacío</string>
+    <string name="please_enter_a_valid_email">Por favor, introduce un email válido</string>
+    <string name="usuario">Usuario</string>
+    <string name="hola">Hola,</string>
+    <string name="el_id_de_tu_usuario_es">"El ID de tu usuario es: \n "</string>
+    <string name="google_sign_in_failed">Ha fallado el inicio de sesión con Google</string>
+    <string name="signinwithcredential_failure">Ha fallado el inicio de sesión con Google</string>
+    <string name="user_not_logged_in">Usuario no encontrado</string>
+    <string name="sesi_n_cerrada">Sesión cerrada</string>
+    <string name="name_cannot_be_empty">El nombre no puede ser vacío</string>
+    <string name="signup_successful">Registro correcto</string>
+    <string name="signup_failed">Error de registro</string>
+    <string name="Sign_Up">Registro</string>
 </resources>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SignUpActivity">
+    tools:context=".Views.SignUpActivity">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,7 +26,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="@string/Sign_Up"
                 android:textAlignment="center"
                 android:textColor="@color/design_default_color_error"
                 android:textSize="36sp"
@@ -80,7 +80,7 @@
                 android:layout_height="60dp"
                 android:layout_marginTop="30dp"
                 android:backgroundTint="@color/design_default_color_error"
-                android:text="Sign Up"
+                android:text="@string/Sign_Up"
                 android:textSize="18sp"
                 app:cornerRadius="20dp"
                 tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,VisualLintButtonSize" />

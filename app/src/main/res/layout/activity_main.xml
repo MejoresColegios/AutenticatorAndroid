@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Views.MainActivity">
 
     <TextView
         android:id="@+id/saludoTextView"
@@ -21,17 +21,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSignOut"
+        android:id="@+id/btnViewContacts"
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:backgroundTint="@color/design_default_color_secondary_variant"
+        android:text="@string/btnViewContacts"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saludoTextView"
+        app:layout_constraintVertical_bias="0.881"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="72dp"
+        android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="@string/SignOut"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saludoTextView"
         tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

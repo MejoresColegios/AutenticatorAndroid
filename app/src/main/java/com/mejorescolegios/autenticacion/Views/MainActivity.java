@@ -1,5 +1,8 @@
-package com.mejorescolegios.autenticacion;
+package com.mejorescolegios.autenticacion.Views;
 
+import static com.mejorescolegios.autenticacion.R.string.sesi_n_cerrada;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +16,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.mejorescolegios.autenticacion.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private TextView saludoTextView;
     private Button signOut;
+    private Button btnViewContacts;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,20 +44,30 @@ public class MainActivity extends AppCompatActivity {
         // Obtener usuario actual
         FirebaseUser usuario = auth.getCurrentUser();
         if (usuario != null) {
-            String nombreUsuario = usuario.getDisplayName() != null ? usuario.getDisplayName() : "Usuario";
+            String nombreUsuario = usuario.getDisplayName() != null ? usuario.getDisplayName() : getString(R.string.usuario);
             String uidUsuario = usuario.getUid();
 
-            saludoTextView.setText("Hola, " + nombreUsuario + ". \nEl ID de tu usuario es: \n" + uidUsuario);
+            saludoTextView.setText(getString(R.string.hola) + nombreUsuario + ". \n" +
+                    getString(R.string.el_id_de_tu_usuario_es) + uidUsuario);
         } else {
-            saludoTextView.setText("Por favor, inicia sesión");
+            saludoTextView.setText(R.string.txtSigIn);
         }
+
+        // Configurar el botón para ver contactos
+        btnViewContacts = findViewById(R.id.btnViewContacts);
+        btnViewContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //startActivity(new Intent(MainActivity.this, ViewContacts.class));
+            }
+        });
 
         // Configurar el botón de cerrar sesión
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 auth.signOut();
-                Toast.makeText(MainActivity.this, "Sesión cerrada", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, sesi_n_cerrada, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, Inicial.class));
                 finish();
             }
