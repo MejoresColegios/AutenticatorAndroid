@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Autenticacion"
         tools:targetApi="31">
         <activity
+            android:name=".Views.InsertContactActivity"
+            android:exported="false" />
+        <activity
             android:name=".Views.Inicial"
             android:exported="true">
             <intent-filter>
@@ -28,7 +31,7 @@
             android:exported="false" />
         <activity
             android:name=".Views.SignUpActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Views.MainActivity"
             android:exported="false" />

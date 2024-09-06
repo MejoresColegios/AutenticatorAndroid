@@ -24,4 +24,9 @@
     <string name="signup_successful">Registro correcto</string>
     <string name="signup_failed">Error de registro</string>
     <string name="Sign_Up">Registro</string>
+    <string name="btnNewContact">Nuevo contacto</string>
+    <string name="newContact">Añadir contacto</string>
+    <string name="Phone">Teléfono</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="Save">Guardar</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.mejorescolegios.autenticacion.Views;
 
+import static com.mejorescolegios.autenticacion.R.string.btnNewContact;
 import static com.mejorescolegios.autenticacion.R.string.sesi_n_cerrada;
 
 import android.annotation.SuppressLint;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView saludoTextView;
     private Button signOut;
     private Button btnViewContacts;
+    private Button btnNewContact;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -59,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(MainActivity.this, ViewContacts.class));
+            }
+        });
+
+        // Configurar el botón para agregar un nuevo contacto
+        btnNewContact = findViewById(R.id.btnNewContact);
+        btnNewContact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, InsertContactActivity.class));
             }
         });
 
