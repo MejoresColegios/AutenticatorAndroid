@@ -29,4 +29,5 @@
     <string name="Phone">Teléfono</string>
     <string name="Cancel">Cancelar</string>
     <string name="Save">Guardar</string>
+    <string name="back">Volver</string>
 </resources>

@@ -85,12 +85,6 @@ public class InsertContactActivity extends AppCompatActivity {
         });
 
         // Botón de cancelar
-        buttonCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Volver a la pantalla anterior
-                finish();
-            }
-        });
+        buttonCancel.setOnClickListener(v -> finish());
     }
 }

@@ -1,6 +1,5 @@
 package com.mejorescolegios.autenticacion.Views;
 
-import static com.mejorescolegios.autenticacion.R.string.btnNewContact;
 import static com.mejorescolegios.autenticacion.R.string.sesi_n_cerrada;
 
 import android.annotation.SuppressLint;
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         btnViewContacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(MainActivity.this, ViewContacts.class));
+                startActivity(new Intent(MainActivity.this, ViewContactsActivity.class));
             }
         });
 
