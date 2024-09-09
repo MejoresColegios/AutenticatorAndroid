@@ -13,6 +13,7 @@ firebaseAnalytics = "22.0.2"
 mysqlConnectorJava = "8.0.33"
 playServicesAuth = "21.2.0"
 firebaseDatabase = "21.0.0"
+firebaseInappmessagingDisplay = "21.0.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -27,6 +28,7 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysqlConnectorJava" }
 play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-inappmessaging-display = { group = "com.google.firebase", name = "firebase-inappmessaging-display", version.ref = "firebaseInappmessagingDisplay" }
 
 
 [plugins]

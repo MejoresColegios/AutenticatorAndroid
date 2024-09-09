@@ -3,7 +3,7 @@
     <string name="password">Contraseña</string>
     <string name="login">Acceder</string>
     <string name="not_yet_registered_sign_up">¿No estás registrado? Pulsa aquí</string>
-    <string name="FullName">Nombre completo</string>
+    <string name="FullName">Nombre</string>
     <string name="Google">Accede con Google</string>
     <string name="EmailPassword">Correo y contraseña</string>
     <string name="SignOut">Cerrar sesión</string>
@@ -30,4 +30,7 @@
     <string name="Cancel">Cancelar</string>
     <string name="Save">Guardar</string>
     <string name="back">Volver</string>
+    <string name="user_list">Lista de usuarios</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Borrar</string>
 </resources>
