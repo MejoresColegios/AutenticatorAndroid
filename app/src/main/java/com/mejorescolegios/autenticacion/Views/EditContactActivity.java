@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.mejorescolegios.autenticacion.Model.Contacto;
 import com.mejorescolegios.autenticacion.R;
@@ -47,8 +48,7 @@ public class EditContactActivity extends AppCompatActivity {
             contacto = intent.getParcelableExtra("contacto");
         }
 
-        // Obtener el uid del usuario actual
-        uidUser = auth.getCurrentUser().getUid();
+
 
         // Mostrar los datos del contacto en los campos de edición
         editName.setText(contacto.getNombre());
@@ -75,8 +75,11 @@ public class EditContactActivity extends AppCompatActivity {
                 contacto.setCorreo(correo);
                 contacto.setTelefono(telefono);
 
-                // Guardar los cambios en la base de datos
-                database.getReference("contactos").child(uidUser).child(contacto.getId()).setValue(contacto);
+
+                // Actualizar el contacto en la base de datos
+                DatabaseReference reference = database.getReference("contactos").child(contacto.getId());
+                reference.setValue(contacto);
+
 
                 // Mostrar mensaje de éxito
                 Toast.makeText(EditContactActivity.this, "Contacto actualizado", Toast.LENGTH_SHORT).show();
